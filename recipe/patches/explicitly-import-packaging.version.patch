@@ -1,0 +1,32 @@
+From c37f961ce32f8f0781daf991c27c6cd0c9337973 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Adri=C3=A1n=20Insaurralde=20Avalos?=
+ <36372335+adrianinsaval@users.noreply.github.com>
+Date: Mon, 18 Mar 2024 11:13:30 -0300
+Subject: [PATCH] Explicitly import packaging.version
+
+---
+ Tests/oss-fuzz/test_fuzzers.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Tests/oss-fuzz/test_fuzzers.py b/Tests/oss-fuzz/test_fuzzers.py
+index dc111c38b36..30f6e0003ff 100644
+--- a/Tests/oss-fuzz/test_fuzzers.py
++++ b/Tests/oss-fuzz/test_fuzzers.py
+@@ -2,7 +2,7 @@
+ import sys
+ 
+ import fuzzers
+-import packaging
++from packaging import version
+ import pytest
+ 
+ from PIL import Image, features
+@@ -10,7 +10,7 @@
+ if sys.platform.startswith("win32"):
+     pytest.skip("Fuzzer is linux only", allow_module_level=True)
+ if features.check("libjpeg_turbo"):
+-    version = packaging.version.parse(features.version("libjpeg_turbo"))
++    version = version.parse(features.version("libjpeg_turbo"))
+     if version.major == 2 and version.minor == 0:
+         pytestmark = pytest.mark.valgrind_known_error(
+             reason="Known failing with libjpeg_turbo 2.0"
