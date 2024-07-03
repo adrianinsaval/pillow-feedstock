@@ -11,4 +11,4 @@ provider:
   linux: github_actions
   osx: github_actions
   win: github_actions
-test_on_native_only: true
+test: native_and_emulated
