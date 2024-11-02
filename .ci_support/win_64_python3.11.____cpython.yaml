@@ -1,21 +1,23 @@
 c_compiler:
 - vs2019
 channel_sources:
-- freecad/label/dev,conda-forge
+- conda-forge
 channel_targets:
 - freecad dev
 freetype:
 - '2'
+jpeg:
+- '9'
 lcms2:
 - '2'
 libjpeg_turbo:
 - '3'
 libtiff:
-- '4.6'
+- '4.7'
 libwebp:
 - '1'
 libxcb:
-- '1.16'
+- '1'
 openjpeg:
 - '2'
 pin_run_as_build:
