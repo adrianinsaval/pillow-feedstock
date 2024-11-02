@@ -1,4 +1,2 @@
-channel_sources:
-- freecad/label/dev,conda-forge
 channel_targets:
 - freecad dev
