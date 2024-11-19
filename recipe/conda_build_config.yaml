@@ -1,2 +1,4 @@
 channel_targets:
 - freecad dev
+libxcb:  #[win]
+- 1.16  #[win]
