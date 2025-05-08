@@ -1,11 +1,7 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 c_compiler:
 - gcc
 c_compiler_version:
 - '13'
-cdt_arch:
-- aarch64
 cdt_name:
 - conda
 channel_sources:
@@ -13,7 +9,7 @@ channel_sources:
 channel_targets:
 - freecad dev
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- quay.io/condaforge/linux-anvil-x86_64:alma9
 freetype:
 - '2'
 lcms2:
